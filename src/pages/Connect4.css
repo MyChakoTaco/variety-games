@@ -1,0 +1,63 @@
+.connect4 {
+    display: grid;
+    grid-template: 150px 150px 150px / 150px 150px 150px;
+  }
+  
+  .connect4-container {
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .connect4-ui {
+    padding-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  .connect4-ui .X {
+    color: #0F4392;
+  }
+  
+  .connect4-ui .O {
+    color: #DD1717;
+  }
+  
+  .connect4-ui-button {
+    display:none;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    border: 0px;
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    background-color: #CCDD40;
+    font-size: 60px;
+    box-shadow: 1px 1px 5px black;
+    transition: .25s;
+  }
+  
+  .connect4-ui-button.display {
+    display: block;
+    opacity: 0;
+  }
+  
+  .connect4-ui-button.display.show {
+    opacity: 1;
+  }
+  
+  .connect4-ui-button:hover {
+    padding: 30px;
+    background-color: #F5F5C2;
+    box-shadow: 1px 1px 15px black;
+    cursor: pointer;
+  }
+  
+  .connect4-ui-button:focus {
+    outline:  none;
+  }

@@ -1,0 +1,115 @@
+.tic-tac-toe {
+    display: grid;
+    grid-template: 150px 150px 150px / 150px 150px 150px;
+  }
+  
+  .tic-tac-toe-container {
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tic-tac-toe > .tile {
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .tic-tac-toe > .tile:nth-child(1),
+  .tic-tac-toe > .tile:nth-child(2),
+  .tic-tac-toe > .tile:nth-child(4),
+  .tic-tac-toe > .tile:nth-child(5),
+  .tic-tac-toe > .tile:nth-child(7),
+  .tic-tac-toe > .tile:nth-child(8) {
+    border-right: 8px solid black;
+  }
+  
+  .tic-tac-toe > .tile:nth-child(1),
+  .tic-tac-toe > .tile:nth-child(2),
+  .tic-tac-toe > .tile:nth-child(3),
+  .tic-tac-toe > .tile:nth-child(4),
+  .tic-tac-toe > .tile:nth-child(5),
+  .tic-tac-toe > .tile:nth-child(6) {
+    border-bottom: 8px solid black;
+  }
+  
+  .tic-tac-toe .tile-text {
+    font-size: 75px;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+    user-select: none;
+  }
+  
+  .tic-tac-toe .tile-text.is-done {
+    font-size: 100px;
+    opacity: 1;
+  }
+  
+  .tic-tac-toe .tile-text.X {
+    color: #0F4392;
+  }
+  
+  .tic-tac-toe .tile-text.O {
+    color: #DD1717;
+  }
+  
+  .tic-tac-toe .tile:hover .tile-text.can-hover {
+    opacity: .2;
+  }
+  
+  .tic-tac-toe-ui {
+    padding-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  .tic-tac-toe-ui .X {
+    color: #0F4392;
+  }
+  
+  .tic-tac-toe-ui .O {
+    color: #DD1717;
+  }
+  
+  .tic-tac-toe-ui-button {
+    display:none;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    border: 0px;
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    background-color: #CCDD40;
+    font-size: 60px;
+    box-shadow: 1px 1px 5px black;
+    transition: .25s;
+  }
+  
+  .tic-tac-toe-ui-button.display {
+    display: block;
+    opacity: 0;
+  }
+  
+  .tic-tac-toe-ui-button.display.show {
+    opacity: 1;
+  }
+  
+  .tic-tac-toe-ui-button:hover {
+    padding: 30px;
+    background-color: #F5F5C2;
+    box-shadow: 1px 1px 15px black;
+    cursor: pointer;
+  }
+  
+  .tic-tac-toe-ui-button:focus {
+    outline:  none;
+  }

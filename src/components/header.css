@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    font-weight: bold;
+    height: 100%;
+  }
+  
+  .header > a {
+    flex: 1;
+    display: grid;
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: #CCDD40;
+    transition: .2s;
+  }
+  
+  .header > a:nth-child(even) {
+    background-color: #daeb46
+  }
+  
+  .header > a:hover {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    background-color: #F5F5C2;
+  }
