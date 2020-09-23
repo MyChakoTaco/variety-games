@@ -5,7 +5,11 @@ function footer() {
     return (
         <footer className="footer">
             <div>
-                Charles Hsueh | 2020
+                <a
+                    href="https://github.com/mychakotaco"
+                    target="_blank">
+                    <b>Charles Hsueh</b> | updated 2020
+                </a>
             </div>
         </footer>
     )

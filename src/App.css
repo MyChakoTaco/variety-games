@@ -7,7 +7,7 @@
 }
 
 .App h1 {
-  font-size: 70px;
+  font-size: 4em;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -17,6 +17,7 @@
 
 .App-header {
   height: 100%;
+  z-index: 1;
 }
 
 .App-body {
@@ -30,4 +31,20 @@
 
 .App-footer {
   height: 100%;
+}
+
+@media (max-width: 620px) {
+  .App h1 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    grid-template: 50px auto 30px / auto
+  }
+
+  .App-body {
+    background-color: white;
+  }
 }

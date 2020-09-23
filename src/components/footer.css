@@ -1,9 +1,27 @@
 .footer {
     display: flex;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 .5em;
     justify-content: flex-end;
     align-items: center;
     color: #4F8AA3;
     background-color: #AFE2F8;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    padding: 0em 1em;
+    transition: .1s;
+}
+
+.footer a:hover {
+    color: darkblue;
+    padding: 0em 1.4em;
+}
+
+@media (max-width: 400px) {
+    .footer {
+        background-color: white;
+    }
 }

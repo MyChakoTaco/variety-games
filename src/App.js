@@ -15,7 +15,9 @@ function App() {
         </div>
         <div className="App-body">
           <Switch>
-            <Route exact path="/">Welcome to the games</Route>
+            <Route exact path="/">
+              <h1>Welcome to the games!</h1>
+            </Route>
             <Route path='/TicTacToe'>
               <div>
                 <h1>Tic Tac Toe</h1>
@@ -23,13 +25,24 @@ function App() {
               </div>
             </Route>
             <Route path='/Connect4'>
-            <div>
+              <div>
                 <h1>Connect 4</h1>
-                <Connect4 />
+                <p>Sorry. I'm still developing this game!</p>
+                {/* <Connect4 /> */}
               </div>
             </Route>
-            <Route path='/Checkers'>Checkers</Route>
-            <Route path='/Chess'>Chess</Route>
+            <Route path='/Checkers'>
+              <div>
+                <h1>Checkers</h1>
+                <p>Sorry. I'm still developing this game!</p>
+              </div>
+            </Route>
+            <Route path='/Chess'>
+              <div>
+                <h1>Chess</h1>
+                <p>Sorry. I'm still developing this game!</p>
+              </div>
+            </Route>
           </Switch>
         </div>
         <div className="App-footer">

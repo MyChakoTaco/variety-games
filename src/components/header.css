@@ -1,26 +1,120 @@
 .header {
-    display: flex;
-    font-weight: bold;
-    height: 100%;
+  height: 100%;
+}
+
+.header img {
+  display: none;
+}
+
+.header-expand {
+  display: none;
+}
+
+.header-links {
+  display: flex;
+  font-weight: bold;
+  height: 100%;
+  box-shadow: 0px 5px 5px gray;
+}
+
+.header-links > a {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  text-decoration: none;
+  color: black;
+  background-color: #CCDD40;
+  transition: .2s;
+  padding: 0em;
+}
+
+.header-links > a:nth-child(even) {
+  background-color: #daeb46
+}
+
+.header-links > a:hover {
+  padding: 0em 2em;
+  text-decoration: none;
+  background-color: #F5F5C2;
+}
+
+@media (max-width: 620px) {
+  .header {
+    position: relative;
+    text-align: left;
   }
-  
-  .header > a {
-    flex: 1;
-    display: grid;
-    align-content: center;
-    text-decoration: none;
-    color: black;
-    background-color: #CCDD40;
+
+  .header img {
+    display: initial;
+  }
+
+  .header-links {
+    position: absolute;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    transform: translateY(-100%);
     transition: .2s;
+    z-index: -1;
+    height: auto;
   }
-  
-  .header > a:nth-child(even) {
-    background-color: #daeb46
+
+  .header-links.is-expand {
+    transform: translateY(0);
   }
-  
-  .header > a:hover {
-    padding-right: 20px;
-    padding-left: 20px;
+
+  .header-links > a {
+    position: relative;
+    display: grid;
+    flex-direction: row;
+    height: 4em;
+    padding-left: 3em;
+    font-weight: normal;
+    background-color:  #CCDD40;
+  }
+
+  .header-links > a:nth-child(even) {
+    background-color:  #CCDD40;
+  }
+
+  .header-links.is-expand > a:hover {
+    padding: 0em 0em 0em 3em;
     text-decoration: none;
     background-color: #F5F5C2;
   }
+
+  .header-links.is-expand > a:hover > img {
+    left: 1.8em;
+  }
+
+  .header-links > a > img {
+    width: 1em;
+    position: absolute;
+    left: 1.5em;
+    top: 50%;
+    transform: translateY(-60%);
+    transition: left .2s;
+  }
+
+  .header-expand {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    border: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 2em;
+    background-color: #daeb46;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .header-expand img {
+    width: 1em;
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+}
